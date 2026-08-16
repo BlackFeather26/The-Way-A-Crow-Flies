@@ -1,0 +1,132 @@
+:root {
+  --black: #101418;
+  --charcoal: #1b2229;
+  --blue: #0878d1;
+  --blue-dark: #045a9e;
+  --gold: #d6a84b;
+  --white: #ffffff;
+  --gray: #aab3bb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--charcoal);
+  padding: 18px 20px;
+  border-bottom: 2px solid var(--blue);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.tagline {
+  margin-top: 6px;
+  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.map {
+  position: relative;
+  flex: 1;
+  min-height: 65vh;
+  background: #26343c;
+  overflow: hidden;
+}
+
+.route {
+  position: absolute;
+  height: 6px;
+  background: var(--blue);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 120, 209, 0.8);
+}
+
+.tools {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  background: var(--charcoal);
+  border-top: 1px solid #34414b;
+}
+
+.tool {
+  flex: 1;
+  max-width: 110px;
+  padding: 10px 6px;
+  border: 1px solid #44515b;
+  border-radius: 10px;
+  background: #202930;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+}
+
+.tool:hover {
+  border-color: var(--blue);
+  background: #27343d;
+}
+
+.tool-icon {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: var(--gold);
+}
+
+button {
+  background: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--blue-dark);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .tools {
+    flex-wrap: wrap;
+  }
+
+  .tool {
+    min-width: 70px;
+  }
+}
