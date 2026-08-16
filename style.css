@@ -130,3 +130,90 @@ button:hover {
     min-width: 70px;
   }
 }
+.search-box {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 420px);
+  padding: 14px 16px;
+  background: rgba(16, 20, 24, 0.92);
+  border: 1px solid var(--blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+}
+
+.search-icon {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.map-point {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 4;
+}
+
+.start-point {
+  left: 16%;
+  top: 58%;
+}
+
+.destination-point {
+  right: 14%;
+  top: 38%;
+}
+
+.point-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 10px rgba(214, 168, 75, 0.7);
+}
+
+.point-label {
+  background: rgba(16, 20, 24, 0.9);
+  color: var(--white);
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.crow-marker {
+  position: absolute;
+  left: 48%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 6;
+}
+
+.crow-symbol {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  color: var(--gold);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 0 12px rgba(0, 120, 209, 0.7);
+}
+
+.crow-marker span {
+  display: block;
+  margin-top: 5px;
+  color: var(--white);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
