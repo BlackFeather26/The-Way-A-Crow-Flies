@@ -81,7 +81,20 @@
     </nav>
 
   </div>
+<script>
+  const searchBox = document.querySelector('.search-box');
 
+  searchBox.addEventListener('click', function () {
+    const destination = prompt('Where are you going?');
+
+    if (destination && destination.trim() !== '') {
+      searchBox.innerHTML =
+        '<span class="search-icon">⌖</span><span>' +
+        destination.trim() +
+        '</span>';
+    }
+  });
+</script>
 </body>
 </html>
 
