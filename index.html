@@ -83,11 +83,13 @@
   </div>
 <script>
   const searchBox = document.querySelector('.search-box');
+  const destinationLabel = document.querySelector('.destination-point .point-label');
 
   searchBox.addEventListener('click', function () {
     const destination = prompt('Where are you going?');
 
     if (destination && destination.trim() !== '') {
+      destinationLabel.textContent = destination.trim();
       searchBox.innerHTML =
         '<span class="search-icon">⌖</span><span>' +
         destination.trim() +
